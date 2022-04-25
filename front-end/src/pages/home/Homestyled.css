@@ -1,0 +1,261 @@
+html, body {
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1152px;
+    position: relative;
+}
+
+.banner {
+    position: absolute;
+    width: 692px;
+    height: 661px;
+    left: 0px;
+    top: 0px;
+
+    background: rgba(231, 240, 242, 0.3);
+    backdrop-filter: blur(6px);
+}
+
+.header {
+    position: absolute;
+    width: 619px;
+    height: 184px;
+    left: 77px; 
+    top: 88px;
+}
+
+.title1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 94.92%;
+    color: #000000;
+    margin: 0;
+}
+
+.latest {
+    position: absolute;
+    width: 200px;
+    height: 15.38px;
+    left: 856px;
+    top: 88px;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.all {
+    position: absolute;
+    width: 200px;
+    height: 15.38px;
+    left: 856px;
+    top: 124.16px;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.button-shop-now {
+    position: absolute;
+    width: 98px;
+    height: 32px;
+    left: 77px;
+    top: 294px;
+
+    background: #000000;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    color: #FFFFFF;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+
+    cursor: pointer;
+
+
+}
+
+/* .shop-now {
+    position: absolute;
+    width: 98px;
+    height: 32px;
+    left: 77px;
+    top: 294px;
+
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+} */
+
+.line1 {
+    position: absolute;
+    width: 241px;
+    height: 0px;
+    left: 823px;
+    top: 373px;
+
+    border: 1px solid #E7F0F2;
+
+}
+
+.line2 {
+    position: absolute;
+    width: 1px;
+    height: 79.97px;
+    left: 1071px;
+    top: 78.84px;
+
+    background: #E7F0F2;
+}
+
+.header2 {
+    position: absolute;
+    width: 619px;
+    height: 89px;
+    left: 442px;
+    top: 278px;
+}
+
+.title2 {
+
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 34px;
+    text-align: right;
+
+    color: #000000;
+
+}
+
+.text-isi {
+
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    
+    position: absolute;
+    width: 200px;
+    height: 56px;
+    left: 861px;
+    top: 380px;
+
+    color: rgba(0, 0, 0, 0.55);
+}
+
+/* Base class */
+.rectangle {
+    position: absolute;
+    width: 215px;
+    height: 114px;
+    top: 473px;
+    margin-top: 30px;
+    background: #000000;
+}
+
+.rectangle h5 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 9px;
+    line-height: 11px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.rectangle h6 {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 8px;
+    /* identical to box height */
+
+    text-align: right;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    margin: 0;
+    margin-top: 5px;
+
+}
+
+.rectangle-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.rectangle-text {
+    position: absolute;
+    right:0;
+    bottom: 0;
+    margin: 20px;
+}
+
+/* Unique class */
+.rectangle.rectangle1 {
+    left: 849px;
+}
+
+/* Unique class */
+.rectangle2 {
+    left: 585px;
+}
+
+/* Unique class */
+.rectangle3 {
+    left: 321px;
+}
+
+.footer {
+    position: absolute;
+    width: 1152px;
+    height: auto;
+    left: 0px;
+    top: 630px;
+
+    background: #FFFFFF;
+}
+
+.footer img {
+    position: absolute;
+    /* align-items: center; */
+    left: 50%;
+    
+}

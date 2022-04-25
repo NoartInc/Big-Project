@@ -1,0 +1,347 @@
+html, body {
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+}
+
+header {
+    position: relative;
+}
+
+.header-shop {
+    position: absolute;
+    width: 415px;
+    height: 44px;
+    left: 76px;
+    top: 39px;
+
+    background: #FFFFFF;
+}
+
+.header-shop h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 34px;
+
+    color: #000000;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.input-search {
+    max-width: 200px;
+    position: relative;
+    margin-bottom: 1rem;
+    left: 700px;
+    top: 70px;
+}
+
+.search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent;
+    border: 0;
+    padding: 0.8rem 1.2rem;
+}
+
+.input-text {
+    padding: 0.5rem;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    width: 95%;
+    transition: all .2s ease-in-out;
+}
+
+.input-text:focus {
+    border-bottom-color: #09f;
+}
+
+.search-button img {
+    width: 14px;
+    height: 14px;
+    background: #FFFFFF;
+}
+
+.select-input {
+    padding: 0.4rem 1rem 0.4rem 0;
+    border: 0;
+    background: transparent;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content-shop {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin: 3px 76px 0px 76px;
+    margin-top: 120px;
+}
+
+.product-list {
+    width: 680px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+}
+
+/* ini .content-shop */
+main.content-shop .product-list .product-card {
+    width: 173px;
+    height: 116px;
+    background: rgba(231, 240, 242, 0.3);
+    backdrop-filter: blur(6px);
+    position: relative;
+    margin: 0 20px 31px 20px;
+}
+
+/* ini .shop-content */
+main.content-shop .product-list .product-card .product-section {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: 137px;
+    height: 46px;
+
+}
+
+main.content-shop .product-list .product-card .product-section h4,
+main.content-shop .product-list .product-card .product-section h5 {
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+main.content-shop .product-list .product-card .product-section h4 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16px;
+    
+}
+
+main.content-shop .product-list .product-card .product-section h5 {
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 10px;    
+    line-height: 16px;
+}
+.pagination {
+    margin: 0 auto;
+    width: 336px;
+    border-top: 1px solid #E7F0F2;
+    margin-bottom: 40px;
+    
+ }
+ 
+.pagination ul {
+    margin: 8px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    list-style-type: none;
+    
+ }
+ 
+.pagination ul li a {
+    letter-spacing: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    opacity: 0.3;
+    text-decoration: none;
+ }
+ 
+.pagination ul li:first-child a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 1em;
+    opacity: 1;
+}
+
+main ul {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+.featured {
+    width: 143px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.featured ul {
+    border-left: 2px solid #E7F0F2;
+    font-family: 'ubuntu', sans-serif;
+}
+
+.featured-list li {
+    /* position: absolute; */
+    width: 127px;
+    height: 15px;
+    /* left: 92px; */
+    /* top: 335px; */
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #000000;
+}
+
+.featured-list li a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    text-decoration: none;
+
+    color: #000000;
+}
+
+.featured ul li a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-decoration: none;
+
+    color: #000000;
+}
+
+.featured ul li {
+    margin-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 14px;
+    
+}
+
+/* .line-featured {
+    position: absolute;
+    width: 2px;
+    height: 199.97px;
+    left: 76px;
+    top: 360px;
+    display: none;
+    background: #E7F0F2;
+} */
+
+aside {
+    position: relative;
+}
+
+.filter {
+    /* position: absolute;  */
+    width: 146px;
+    /* height: 199.97px; */
+    /* left: 998px; */
+    /* top: 125px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    
+}
+
+.filter-list li {
+    position: absolute;
+    width: 123px;
+    height: 15px;
+    left: 933px;
+    top: 125px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    
+
+    color: #000000;
+}
+
+/* .filter-list li a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+
+    color: #000000;
+} */
+
+.filter ul a {
+    text-decoration: none;
+    font-family: 'ubuntu';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;   
+
+    color: #000000;
+}
+
+.filter ul li {
+    margin-bottom: 20px;
+}
+
+.filter ul {
+    border-right: 2px solid #E7F0F2;
+    text-align: right;
+    padding-right: 30px;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 750;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+
+    color: #000000;
+}
+
+.filter ul li a {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    /* text-align: right; */
+
+    color: #000000;
+}

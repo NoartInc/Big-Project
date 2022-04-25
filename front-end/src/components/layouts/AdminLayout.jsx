@@ -1,0 +1,38 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+const menuList = [
+    { path: "/admin", title: "Home" },
+    { path: "/admin/category", title: "Category" },
+    { path: "/admin/product", title: "Product" }
+]
+
+const AdminLayout = ({ children }) => {
+  return (
+    <div>
+        <header>
+            <nav className="bg-gray-800 text-white border-b border-gray-200 shadow-sm flex justify-start items-center gap-x-3">
+                <h1 className="p-3 px-4">Admin Panel</h1>
+                <ul className="flex justify-start items-center gap-x-2">
+                    {menuList.map((menu, index) => (
+                        <li key={index}>
+                            <Link 
+                                to={menu.path} 
+                                className="p-3 px-4 hover:bg-gray-700 transition-all duration-200 ease-in-out"
+                            >{menu.title}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        </header>
+        <main className="h-screen p-4">
+            {children}
+        </main>
+        <footer className="p-2 bg-gray-100">
+            <p className="text-center">Copyright &copy; 2022</p>
+        </footer>
+    </div>
+  )
+}
+
+export default AdminLayout

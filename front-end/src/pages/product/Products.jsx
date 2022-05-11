@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './Productsstyled.css'
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, setProduct } from '../../store/actions/product-action';
+import { addToCart, getProduct, getProductById, setProduct } from '../../store/actions/product-action';
 import { IoApps } from 'react-icons/io5';
 import {BsCart4} from 'react-icons/bs';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
@@ -18,31 +18,32 @@ function Products() {
     }
 
 useEffect(() => {
-    dispatch(setProduct(params.id));
+    dispatch(getProductById(params.id));
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    console.log(product);
   return (
     <div className="container">
         
         <div className="banner2"></div>
         {/* <img style={{background: process.env.PUBLIC_URL + '/images/img1.png'}} src={process.env.PUBLIC_URL + '/images/img1.png'} alt="gambar orang" /> */}
-        <img className="img-product" src={product?.imageUrl} alt="" />
+        <img className="img-product" src={product?.image} alt="" />
 
         <div className="header-box">
             <div className="header-text">
                 {/* <h3>Color</h3> */}
-                <h3><b>{product?.productName}</b></h3>
+                <h3><b>{product?.name}</b></h3>
             </div>
         </div>
         <div className="harga-box">
             <div className="harga-text">
-                <h3>Rp.{product?.productPrice}</h3>
+                <h3>Rp.{product?.price}</h3>
                 <h1><del>Rp.100000000</del></h1>
             </div>    
         </div>
         <div className="text-box">
-            <p dangerouslySetInnerHTML={{__html: product?.productDesc}}></p>
+            <p dangerouslySetInnerHTML={{__html: product?.description}}></p>
             {/* <p>{product?.productDesc}</p> */}
             {/* <p>Kacamata tampan dan berani</p> */}
             {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> */}
@@ -50,7 +51,7 @@ useEffect(() => {
         <div className="size">
             <h3>Size:</h3>
         </div>
-        <select className="select-size" value={product?.productSize}>
+        <select className="select-size" value={product?.size}>
             <option value="l">Large</option>
             <option value="m">Medium</option>
             <option value="s">Small</option>

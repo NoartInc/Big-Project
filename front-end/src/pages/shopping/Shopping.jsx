@@ -16,6 +16,7 @@ function Shopping() {
 
     useEffect(() => {
         dispatch(getProduct());
+        console.log(productList);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
@@ -24,7 +25,7 @@ function Shopping() {
         <header>
         
         <div className="header-shop">
-        <h3>Your Shop Name</h3>
+        <h3>Wearing Inges</h3>
         </div>
         
         <div>

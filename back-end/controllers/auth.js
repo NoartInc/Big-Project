@@ -9,7 +9,7 @@ exports.register = async (req, res, next) => {
   try {
     const { username, password } = req.body;
     
-    const existCheck = await User.findone({
+    const existCheck = await User.findOne({
       where: { username },
     });
     

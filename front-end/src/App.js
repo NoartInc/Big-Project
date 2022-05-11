@@ -8,7 +8,9 @@ import HomeAdmin from './pages/Admin/HomeAdmin/HomeAdmin';
 import Category from './pages/Admin/Category/Category';
 import Product from './pages/Admin/Product/Product';
 import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
 import { useSelector } from 'react-redux';
+import ListProduct from './pages/Admin/Product/ListProduct';
 
 function ProtectedRoute(props) {
   const { isLogin } = useSelector(state => state.authReducer)
@@ -32,8 +34,10 @@ function App() {
         <Route path="/carts" component={Carts} />
         <ProtectedRoute exact path="/admin" component={HomeAdmin} />
         <ProtectedRoute path="/admin/category" component={Category} />
-        <ProtectedRoute path="/admin/product" component={Product} />
+        <ProtectedRoute exact path="/admin/product" component={ListProduct} />
+        <ProtectedRoute path="/admin/product/add" component={Product} />
         <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
       </Switch>
     </BrowserRouter>
   );

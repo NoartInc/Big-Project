@@ -43,6 +43,11 @@ const productReducer = (state = initialState, action) => {
                 ...state,
                 carts: cartList
             }
+            case "getProductById":
+            return {
+                ...state,
+                product: action.payload,
+            };
         default:
       return state;
     }

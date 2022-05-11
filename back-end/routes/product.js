@@ -6,8 +6,8 @@ const { findAll, findOne, create, update, delete: remove } = require("../control
 /* GET users listing. */
 router.get("/", findAll);
 router.get("/:id", findOne);
-router.post("/", authorization, create);
-router.delete("/:id", authorization, remove);
-router.put("/:id", authorization, update);
+router.post("/", create);
+router.delete("/:id", remove);
+router.put("/:id", update);
 
 module.exports = router;

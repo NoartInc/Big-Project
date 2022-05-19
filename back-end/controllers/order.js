@@ -1,6 +1,7 @@
 const { Order } = require("../models");
 
 const uuid = require("uuid");
+const { v4: uuidv4 } = require('uuid');
 const Validator = require("fastest-validator");
 const formValidator = new Validator();
 
@@ -32,7 +33,7 @@ exports.findOne = async (req, res, next) => {
   try {
     const { id } = req.params;
     const data = await Order.findByPk(id, {
-      include: "Order",
+      include: "detailorders",
     });
 
     if (!data) {
@@ -47,23 +48,41 @@ exports.findOne = async (req, res, next) => {
 // create
 exports.create = async (req, res, next) => {
   try {
-    const { userId, paymentId, shipmentId, status, buktiBayar } = req.body;
+    const { id: userId } = req.user;
+    const { 
+      shipment: {
+        fullName, email, address, city, postCode, note
+      },
+      carts
+    } = req.body;
 
-    const validation = formValidator.validate(req.body, validationSchema);
-    if (validation.length) {
-      return res.status(400).json({
-        status: false,
-        error: validation,
-      });
-    }
+    // const validation = formValidator.validate(req.body, validationSchema);
+    // if (validation.length) {
+    //   return res.status(400).json({
+    //     status: false,
+    //     error: validation,
+    //   });
+    // }
 
     const data = await Order.create({
       id: uuid.v4(),
       userId,
-      paymentId,
-      shipmentId,
-      status,
-      buktiBayar,
+      address, 
+      city,
+      postCode,
+      note,
+      status: "unpaid",
+      buktiBayar: "",
+      detailorders: carts.map(cart => {
+        return {
+          id: uuidv4(),
+          productId: cart.id,
+          quantity: cart.qty,
+          price: cart.price
+        }
+      })
+    }, {
+      include: ["detailorders"]
     });
 
     if (!data) {
@@ -72,6 +91,7 @@ exports.create = async (req, res, next) => {
 
     res.json(data);
   } catch (error) {
+    console.log(error);
     next(error);
   }
 };

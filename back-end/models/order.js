@@ -19,19 +19,23 @@ module.exports = (sequelize, DataTypes) => {
         as:"users",
         foreignKey:"userId",
       })
-      models.Order.belongsTo(models.Payment,{
-        as:"payments",
-        foreignKey:"paymentId",
-      })
-      models.Order.belongsTo(models.Shipment,{
-        as:"shipments",
-        foreignKey:"shipmentId",
-      })
+      // models.Order.belongsTo(models.Payment,{
+      //   as:"payments",
+      //   foreignKey:"paymentId",
+      // })
+      // models.Order.belongsTo(models.Shipment,{
+      //   as:"shipments",
+      //   foreignKey:"shipmentId",
+      // })
     }
   }
   Order.init({
     status: DataTypes.ENUM('paid','unpaid'),
-    buktiBayar: DataTypes.STRING
+    buktiBayar: DataTypes.STRING,
+    address: DataTypes.STRING,
+    city: DataTypes.STRING,
+    postCode: DataTypes.STRING,
+    note: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Order',

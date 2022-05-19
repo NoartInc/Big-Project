@@ -11,6 +11,8 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import { useSelector } from 'react-redux';
 import ListProduct from './pages/Admin/Product/ListProduct';
+import Shipment from './pages/Shipment/Shipment';
+import Payment from './pages/Payment/Payment';
 
 function ProtectedRoute(props) {
   const { isLogin } = useSelector(state => state.authReducer)
@@ -38,6 +40,8 @@ function App() {
         <ProtectedRoute path="/admin/product/add" component={Product} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path="/shipment" component={Shipment} />
+        <Route path="/payment" component={Payment} />
       </Switch>
     </BrowserRouter>
   );

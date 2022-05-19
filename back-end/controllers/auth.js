@@ -42,13 +42,21 @@ exports.login = async (req, res, next) => {
     });
     
     if (!existCheck) {
-      throw new Error(`user ${username} tidak terdaftar`);
+      // throw new Error(`user ${username} tidak terdaftar`);
+      res.json({
+        status: false,
+        error: `user ${username} tidak terdaftar`
+      }, 400);
     }
     
     const pwdCheck = await bcrypt.compare(password, existCheck.password);
     
     if (!pwdCheck) {
-      throw new Error("error!, password salah");
+      // throw new Error("error!, password salah");
+      res.json({
+        status: false,
+        error: "Error!, password salah"
+      }, 400);
     }
     
     const accessToken = jwt.sign(

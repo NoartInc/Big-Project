@@ -13,31 +13,30 @@ module.exports = {
         default: 'unpaid'
       },
       buktiBayar: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        default: ""
+      },
+      address: {
+        type: Sequelize.STRING,
+        default: ""
+      },
+      city: {
+        type: Sequelize.STRING,
+        default: ""
+      },
+      postCode: {
+        type: Sequelize.STRING,
+        default: ""
+      },
+      note: {
+        type: Sequelize.STRING,
+        default: ""
       },
       userId: {
         type: Sequelize.UUID,
         reference: {
           model: {
             tableName: 'users',
-          },
-          key: 'id',
-        },
-      },
-      paymentId: {
-        type: Sequelize.UUID,
-        reference: {
-          model: {
-            tableName: 'payments',
-          },
-          key: 'id',
-        },
-      },
-      shipmentId: {
-        type: Sequelize.UUID,
-        reference: {
-          model: {
-            tableName: 'shipments',
           },
           key: 'id',
         },

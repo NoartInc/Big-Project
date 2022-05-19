@@ -23,10 +23,13 @@ export const login = (data) => {
                 type: 'LOGIN_USER',
                 payload: res.data
             })
-            window.localStorage.setItem('userData', JSON.stringify(res.data))
+            if (res.status) {
+                window.open("/", "_self");
+            }
+            // window.localStorage.setItem('userData', JSON.stringify(res.data))
         })
         .catch((err) => {
-            console.error(err)
+            alert(err.response.data.error)
         })
     }
 }

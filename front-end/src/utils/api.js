@@ -1,4 +1,5 @@
 import axios from 'axios';
+import store from "../store";
 
 const api = axios.create({
     baseURL: "http://localhost:4000"
@@ -43,3 +44,16 @@ export const deleteRequest = async (url) => {
         return Promise.reject(error);
     }
 }
+
+
+api.interceptors.request.use((req) => {
+    let token = store.getState().authReducer.token;
+
+    if (token) {
+        req.headers.Authorization = `Bearer ${token}`;
+    }
+
+    return req;
+}, (error) => {
+    return Promise.reject(error);
+})

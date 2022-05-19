@@ -61,3 +61,41 @@ export const getProductById = (id) => {
             })
     }
 }
+
+export const removeCart = (id) => {
+    return (dispatch) => {
+        dispatch({ 
+            type: "removeCart",
+            payload: id
+        });
+    }
+}
+
+export const updateCart = (data) => {
+    return (dispatch) => {
+        dispatch({ 
+            type: "setCart", 
+            payload: data
+        });
+    }
+}
+
+export const doOrder = (shipmentData) => {
+    return (dispatch, getState) => {
+        const { carts } = getState().productReducer;
+        postRequest("/order", {
+            carts, 
+            shipment: shipmentData
+        }).then(res => {
+            // res ini data hasil order
+            if (res?.id) {
+                dispatch({ type: "clearCart" });
+                window.open("/payment", "_self");
+            } else {
+                alert("Gagal memproses order");
+            }
+        }).catch(err => {
+            console.log(err);
+        })
+    }
+}

@@ -18,7 +18,7 @@ function Login() {
       username,
       password,
     }))
-    history.push('/home')
+    // history.push('/home')
   }
   return (
     <div className="h-screen flex bg-gray-bg1">
@@ -53,9 +53,9 @@ function Login() {
             </button>
           </div>
 
-          <div class="mt-6 text-grey-dark">
+          <div className="mt-6 text-grey-dark">
                     Don't have an account?
-                    <a class="text-blue-600 hover:underline" href="#" onClick={() => history.push('/register')}>
+                    <a className="text-blue-600 hover:underline" href="#" onClick={() => history.push('/register')}>
                         Register
                     </a>
           </div>

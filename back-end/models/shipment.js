@@ -11,10 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.Shipment.hasMany(models.Order,{
-        as:"orders",
-        foreignKey:"shipmentId",
-      })
+      // models.Shipment.hasMany(models.Order,{
+      //   as:"orders",
+      //   foreignKey:"shipmentId",
+      // })
     }
   }
   Shipment.init({

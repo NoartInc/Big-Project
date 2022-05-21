@@ -116,7 +116,10 @@ function Shipment() {
                             </div>
                             <div className="mt-4">
                                 <button
-                                    className="w-full px-6 py-2 text-blue-200 bg-blue-600 hover:bg-blue-900" type="submit">Process</button>
+                                    className="w-full px-6 py-2 text-blue-200 bg-blue-600 hover:bg-blue-900 rounded-md" type="submit">Process</button>
+                            </div>
+                            <div className="mt-4 text-center">
+                                <button onClick={() => history.goBack()} className="w-1/5 text-sm px-6 py-2 text-red-200 bg-red-600 hover:bg-red-900 rounded-md" type="goback">Back</button>
                             </div>
                         </div>
                     </form>
